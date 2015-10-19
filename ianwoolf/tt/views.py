@@ -51,6 +51,7 @@ class PeopleList3(generics.ListCreateAPIView):
 class PeopleDetail3(generics.RetrieveUpdateDestroyAPIView):
     queryset = people.objects.all()
     serializer_class = peopleSerializer
+
 class DBMVList3(generics.ListCreateAPIView):
     queryset = test2.objects.all()
     serializer_class = test2Serializer

@@ -17,3 +17,12 @@ class people(models.Model):
     def __unicode__(self):
         return smart_unicode(self.name)
         #return str(self.name)
+
+class test2(models.Model):
+    title = models.TextField()
+    daoyan = models.TextField()
+    rating = models.TextField()
+    actier = models.TextField()
+    yingping = models.TextField()
+    def __unicode__(self):
+        return smart_unicode(self.name)

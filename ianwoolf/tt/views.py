@@ -8,9 +8,8 @@ from django.contrib.auth.models import User, Group
 #rest_ser
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from tt.serializers import UserSerializer, GroupSerializer, peopleSerializer
-from tt.models import people
-from tt.models import people
+from tt.serializers import UserSerializer, GroupSerializer, peopleSerializer, test2Serializer
+from tt.models import people, test2
 import util
 
 #from rest_framework.response import Response
@@ -52,6 +51,14 @@ class PeopleList3(generics.ListCreateAPIView):
 class PeopleDetail3(generics.RetrieveUpdateDestroyAPIView):
     queryset = people.objects.all()
     serializer_class = peopleSerializer
+class DBMVList3(generics.ListCreateAPIView):
+    queryset = test2.objects.all()
+    serializer_class = test2Serializer
+
+
+class DBMVDetail3(generics.RetrieveUpdateDestroyAPIView):
+    queryset = test2.objects.all()
+    serializer_class = test2Serializer
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
